@@ -1,10 +1,10 @@
 document.querySelector("button").addEventListener("click",myCheck);
 function myCheck(){
-    let ateam=Math.floor(Math.random()*6);
+    let ateam=Math.floor(Math.random()*6)+1;
 
-    let bteam=Math.floor(Math.random()*6);
+    let bteam=Math.floor(Math.random()*6)+1;
     
-    let cteam=Math.floor(Math.random()*6);
+    let cteam=Math.floor(Math.random()*6)+1;
     if(ateam===bteam===cteam){
         document.querySelector("#member-1").setAttribute("style","background-color:blue")
         document.querySelector("#member-1").innerHTML=ateam;
