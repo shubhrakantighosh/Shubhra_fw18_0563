@@ -96,7 +96,7 @@ function myCheck(){
         document.querySelector("#winner").innerHTML="Winner Player C";
     }
 
-    else if(ateam>bteam&&ateam>cteam&&ateam===bteam){
+    else if(ateam>bteam&&ateam>cteam&&bteam===cteam){
         document.querySelector("#member-1").setAttribute("style","background-color:green")
         document.querySelector("#member-1").innerHTML=ateam;
 
