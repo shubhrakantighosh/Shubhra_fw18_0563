@@ -1,0 +1,69 @@
+#navbar{
+    width: 100%;
+    height: 40px;
+    border: 2px black solid;
+    display: flex;
+    margin-bottom: 50px;
+}
+#navbar>div:first-child{
+    width: 75%;
+    height: 100% ;
+}
+#navbar>div:nth-child(2){
+    display: flex;
+    justify-content: space-evenly;
+    width: 25%;
+}
+#navbar>div:nth-child(2)>h4{
+    margin-top: 10px;
+}
+#navbar>div>h4>a{
+    text-decoration: none;
+    color: black;
+}
+#movies{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+#movies>div{
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    width: 380px;
+    height: 430px;
+    border-radius: 15px;
+    margin-top: 30px;
+}
+#movies>div>h3,p{
+    padding-left: 40px;
+}
+#movies>div>img{
+    width: 380px;
+    height: 340px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+#slideshow>img{
+    width: 100%;
+    height: 420px;
+    border-radius: 10px;
+}
+#sort-buttons{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    padding: 10px 0px 10px 0px;
+    background-color: aqua;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+#sort-buttons>button{
+    margin-left: 10px;;
+    color: white;
+    background-color: coral;
+    border-radius: 5px;
+    border: none;
+}
+#sort-buttons>h3{
+    margin-top: 4px;
+    margin-left: 10px;
+    color: brown;
+}
