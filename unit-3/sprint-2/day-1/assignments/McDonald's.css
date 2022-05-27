@@ -1,0 +1,93 @@
+#navbar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+#navbar>div:first-child{
+    width: 10%;
+    height: auto;
+}
+#navbar>div:nth-child(2){
+    width: 55%;
+    background-color: yellow;
+    height: auto;
+}
+#navbar>div>img{
+    margin-top: -30px;
+}
+#list_of_items{
+    margin-top:0px;
+}
+#last_box{
+    margin-top: 50px;
+}
+body>h1{
+    text-align: center;
+}
+.food_menu{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    gap: 20px;
+}
+.food_menu>div{
+    height: 300px;
+    width: 300px;
+}
+.food_menu>div>img{
+    width:300px;
+    height: 250px;
+}
+.food_menu>div>div{
+    display: flex;
+}
+.food_menu>div>label,input{
+    margin-left: 20px;
+}
+.food_menu>div>div>h3{
+    margin-left: 40px;
+}
+.food_menu>div>div>h3:last-child{
+    color:red;
+    margin-left: 10px;
+}
+#order{
+    margin-top: 40px;
+    margin-left: 45%;
+    background-color: teal;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px ;
+    color: white;
+}
+#order_status_syntax>h3{
+    padding-left: 20px;
+    color: rgb(88, 65, 0);
+    margin-top: 0px;
+}
+#order_status_syntax>div{
+    display: flex;
+}
+#order_status_syntax>div>h3{
+    margin-top: 0px;
+    margin-left: 4px;
+}
+#order_status{
+    margin-left: 10px;
+}
+#order_status>h1{
+    margin-top: -8px;
+    color: red;
+    font-weight: 900;
+    margin-left: 10px;
+}
+#loader{
+    animation: 1s spin1 linear infinite;
+}
+@keyframes spin1{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    }
+    body{
+        background-color: black;
+    }
+    #all_Movies{
+        display: flex;
+        margin-top: 20px;
+        border-radius: 20px;
+        padding: 4px;
+    }
+    #movie_poster{
+        width: 25%;
+    }
+    #movie_poster>img{
+        width: 95%;
+        height: 100%;
+        border-top-left-radius: 17px;
+        border-bottom-left-radius: 17px;
+    }
+    #movie_details{
+        width: 74%;
+        background-color: teal;
+        padding-left: 15px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+    #movie_details>p,h4,h3,h2{
+        color: white;
+        margin-top: 0px;
+        margin-right: 10px;
+    }
+    #movie_details>h2{
+        color:gold;
+        font-weight: 900;
+    }
+    #movie_details>h3{
+        color: brown;
+        font-weight: 900;
+    }
+    #movie_details>p{
+        color: white;
+        margin-top: -14px;
+    }
+    #movie_no_found{
+        width: 1230px;
+        height: 680px;
+        margin-top: -80px;
+    }
+    #home_button{
+        margin-left: 45%;
+        margin-top:-100%;
+        padding-top: 170px;
+        padding-left: 110px;
+        background-color: transparent;
+        border: none;
+    }
+    #navbar{
+        width: 100%;
+        height: 50px;
+    }
+    #movie_name{
+        padding: 7px 150px 8px 10px;
+        border-radius: 6px;
+        border: none;
+        background-color: aquamarine;
+        margin-left: 28%;
+        margin-top: 10px;
+    }
+    #movie_year{
+        padding: 7px 10px 8px 10px;
+        border-radius: 6px;
+        border: none;
+        background-color: aquamarine;
+        
+    }
+    #search_button{
+        padding: 7px 10px 8px 10px;
+        border-radius: 6px;
+        border: none;
+        margin-left: -2px;
+        background-color: rgb(227, 54, 1);
+    }
+    h1{
+        color: goldenrod;
+        text-align: center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 900;
+    }
+    h4{
+        color:blue;
+        font-size: 20px;
+        background-color: white;
+        font-weight: 700;
+        display: inline;
+        margin-top: -4px;
+    }
