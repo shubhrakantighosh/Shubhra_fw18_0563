@@ -16,16 +16,44 @@ async function myCity(){
 
    for(let i=1;i<7;i++){
         
-    let h41=document.createElement('h4');
-    h41.innerText='Temp Max'+" "+" "+((Math.floor(Number(six_days.list[i].main.temp_max)))-273);
+    let day="0"+i+"d";
+    let night="0"+9+"n";
+    if(i===1||i===2||i===3||i===4||i===5){
+       
+    if(i===5){
+    let h4=document.createElement('h4');
+    h4.innerText=Math.floor(Number(six_days.list[i].main.temp_max))-273;
+    
+    let img=document.createElement('img');
+    img.src="https://openweathermap.org/img/wn/09d@2x.png";
+    
+    let div=document.createElement('div');
+    div.append(img,h4);
+    }
+    else{
+    let h4=document.createElement('h4');
+    h4.innerText=Math.floor(Number(six_days.list[i].main.temp_max))-273;
 
-    let h42=document.createElement('h4');
-    h42.innerText='Temp Min'+" "+" "+((Math.floor(Number(six_days.list[i].main.temp_min)))-273);
+    let img=document.createElement('img');
+    img.src="https://openweathermap.org/img/wn/"+day+"@2x.png";
 
     let div=document.createElement('div');
-    div.append(h41,h42);
+    div.append(img,h4);
+    document.getElementById('six_days').append(div);
+    }
+    }
+    else{
+    let h4=document.createElement('h4');
+    h4.innerText=Math.floor(Number(six_days.list[i].main.temp_max))-273;
+
+    let img=document.createElement('img');
+    img.src="https://openweathermap.org/img/wn/"+night+"@2x.png";
+
+    let div=document.createElement('div');
+    div.append(img,h4);
     
     document.getElementById('six_days').append(div);
+    }
     }
 
    let iframe=document.getElementById("gmap_canvas");

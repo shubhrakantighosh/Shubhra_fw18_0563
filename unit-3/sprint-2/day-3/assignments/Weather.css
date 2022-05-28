@@ -30,21 +30,18 @@
     #six_days>div{
         width: 15%;
         height: auto;
-        background-color: rgb(232, 223, 216);
         border-radius: 10px;
-        border: 2px rgb(154, 72, 0) solid;
-        
+        border: 2px rgb(132, 60, 46) solid;
+    }
+    #six_days>div>img{
+        margin-top: -20px;
+        margin-left: -5px;
     }
     #six_days>div>h4{
-        margin-top: -6px;
-        color: brown;
+        margin-top: -20px;
+        margin-left: 40px;
+        color: blue;
         font-weight: 900;
-        padding: 7px;
-        margin-left: 8px;
-    }
-    #six_days>div>h4:last-child{
-        margin-top: -36px;
-        color:green; 
     }
     #map_tag{
         width: 30%;
