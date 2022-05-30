@@ -1,0 +1,28 @@
+*{
+    font-family: Open Sans;
+}
+body{
+    background-color: black;
+}
+#order-form{
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 50px;
+}
+#order-form>form>input{
+    background-color: aqua;
+    padding: 10px 30px 10px 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+}
+#order-form>form>button{
+    padding: 5px 20px 5px 20px;
+    border-radius: 8px;
+    margin-left: 50px;
+    margin-top: 10px;
+    border: none;
+    color: white;
+    background-color: red;
+}
