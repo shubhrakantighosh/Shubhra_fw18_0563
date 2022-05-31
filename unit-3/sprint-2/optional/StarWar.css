@@ -1,0 +1,95 @@
+body{
+    background-image: url(https://media3.giphy.com/media/qMckmE4fHzZhS/giphy.gif?cid=790b761166d88c23b8c68259fb9a4cbc8b8cb048a1107b2d&rid=giphy.gif&ct=g);
+    background-size: cover;
+    height: 100vh;
+    padding:0;
+    margin:0;
+    }
+    body>img{
+        width: 10%;
+    }
+    #input_resultbox{
+        width: 50%;
+        height: 30px;
+        margin: auto;
+        margin-top: 200px;
+    }
+    #input_resultbox{
+        text-emphasis-color: white;
+    }
+    #input_resultbox>input{
+        padding: 20px 400px 20px 30px ;
+        border-radius: 20px;
+        background-color: #2D2F30;
+        border: none;
+    }
+    #input_resultbox>img:first-child{
+        width: 200px;;
+        height: 98.3px;
+        display: block;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 30px;
+    }
+    #search_logo{
+        width: 30px;
+        height: 30px;
+        background-color: yellow;
+        border-radius: 50%;
+        padding: 5px;
+    }
+    #result_div_character{
+        display: flex;
+        margin: auto;
+        width: 480px;
+        height: auto;
+        margin-top: 100px;
+    }
+    #main_div{
+        margin-top: -500px;
+    }
+    #main_div>h1{
+        color: yellow;
+        text-align: center;
+        margin-top: 180px;
+    }
+    #main_div>button{
+        background: black;
+        border: 1px yellow solid;
+        border-radius: 5px;
+        padding: 10px 20px 10px 20px ;
+        margin-left: 43%;
+        margin-top: 50px;
+    }
+    #result_div_character>div{
+        width: 240px;
+        height:200px;
+        border: 2px yellow solid;
+        border-radius: 10px;
+    }
+    #result_div_character>div:last-child{
+        margin-left: 30px;
+    }
+    #result_div_character>div>h2,h3{
+        color: yellow;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 3px;
+    }
+    #result_div_character>div>h3:hover{
+        color: white;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 3px;
+    }
+    #result_div_character>div>h2:hover{
+        color: white;
+        text-align: center;
+        font-weight: 900;
+        margin-bottom: 3px;
+    }
+    #search_logo_div{
+        margin-top: -7.6%;
+        margin-left: 85%;
+    }
