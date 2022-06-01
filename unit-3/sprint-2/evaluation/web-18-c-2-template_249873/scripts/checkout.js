@@ -24,7 +24,10 @@ document.getElementById('order-form').addEventListener('submit',confirmProducts)
     let id;
     function orderStaus(){
      id=setInterval(function(){
-      console.log(i);
+
+      if(i===14){
+        clearInterval(id);
+    }
 
       if(i===0){
         alert('Your order is accepted ');
@@ -47,6 +50,4 @@ document.getElementById('order-form').addEventListener('submit',confirmProducts)
       i++;
     },1000)
     }
-    if(i===14){
-        clearTimeout(id);
-    }
+    
