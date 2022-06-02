@@ -8,6 +8,10 @@ body{
     gap: 15px;
     margin-bottom: 20px;
 }
+#YouTube>div>img{
+    width: 290px;
+    height: 200px;
+}
 #YouTube>div>h3,p{
     margin-top: 0px;
     color: white;
@@ -22,15 +26,16 @@ body{
     background-color: rgb(55, 55, 55);
     margin-bottom: 40px;
 }
-#navbar>div:first-child>img{
-    width: 126px;
-    height: 60px;
+#navbar>div:first-child>a>img{
+    width: 123px;
 }
 #query{
     padding: 10px 400px 10px 10px;
     margin-left: 200px;
     margin-top: 10px;
     background-color: rgb(27, 25, 25);
+    outline: none;
+    color: white;
 }
 #navbar>div:last-child>button{
     padding: 10px 10px 10px 10px;

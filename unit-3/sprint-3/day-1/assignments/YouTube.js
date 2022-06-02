@@ -11,26 +11,40 @@ let search=async ()=>{
 }
 
 let append=(data)=>{
-    data.forEach(({id:{videoId},snippet:{title},snippet:{channelTitle}}) => {
+    document.getElementById('query').value="";
+    data.forEach(({id:{videoId},snippet:{title},snippet:{channelTitle},snippet:{thumbnails}}) => {
         let div=document.createElement('div');
 
-        let iframe=document.createElement('iframe');
-        iframe.src=`https://www.youtube.com/embed/${videoId}`;
-        // iframe.addEventListener('click',function(){
-        //     goToDetails();
-        // })
         let h3=document.createElement('h3');
         h3.innerText=title;
 
         let p=document.createElement('p');
         p.innerText=channelTitle;
 
-        div.append(iframe,h3,p);
+        let img=document.createElement('img');
+        img.src=thumbnails.default.url;
+        img.addEventListener('click',function(){
+
+        let iframe=`https://www.youtube.com/embed/${videoId}`;
+
+            goToDetails(iframe,title,channelTitle);
+        })
+
+        div.append(img,h3,p);
+
         document.getElementById('YouTube').append(div)
               
     });
 }
 
-// function goToDetails(){
-//     console.log("yes");
-// }
+function goToDetails(iframe,channelTitle,title){
+    let arr=[];
+    let obj={
+        iframe,
+        title,
+        channelTitle
+    };
+    arr.push(obj);
+    localStorage.setItem('YouTube',JSON.stringify(arr));
+    window.location.href='YouTube_Result.html'
+}
