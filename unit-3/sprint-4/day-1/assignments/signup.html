@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="signup.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div id="signupUser">
+            <input type="text" placeholder="Enter Your Name" id="name">
+            <input type="text" placeholder="Email" id="email">
+            <input type="text" placeholder="Mobile Number" id="number">
+            <input type="password" placeholder="Password" id="password">
+            <button onclick="signupRegister()">Sign Up</button>        
+    </div>
+</body>
+</html>
+<script type="module">
+    import navbar from "/navbar.js";
+    document.getElementById('navbar').innerHTML=navbar();
+
+</script>
+<script src="signup.js"></script>

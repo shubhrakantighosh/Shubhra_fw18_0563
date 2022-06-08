@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="homePage.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div>
+    </div>
+    <div id="show"></div>
+    <div id="receipe"></div>
+</body>
+</html>
+<script type="module">
+    import navbar from "/navbar.js";
+    document.getElementById('navbar').innerHTML=navbar();
+
+    let userName=JSON.parse(localStorage.getItem('login'));
+    if(userName!==null){
+        document.getElementById('signup').innerHTML="";
+        document.getElementById('login').innerHTML="";
+        document.getElementById('userName').innerHTML=userName;
+        let logout=document.getElementById('logout');
+        logout.innerText="Log Out";
+        logout.addEventListener('click',function(){
+            logOutUser();
+        });
+    }
+    function logOutUser(){
+        document.getElementById('logout').innerText="";
+        localStorage.removeItem("login");
+        window.location.reload();
+    }
+</script>
+<script src="homePage.js"></script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="product">Product Page</h1>
+  <div id="product_Div">
+    <form onsubmit="ProductDetails(event)" id="add">
+        <input type="text" id="name" placeholder="Product name">
+        <input type="text" id="category" placeholder="Category">
+        <input src="img" id="image" placeholder="Image url">
+        <input type="number" id="price" placeholder="Price">
+        <select id="gender">
+            <option>Gender (select)</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <select id="sold">
+            <option>false</option>
+            <option  value="true">true</option>
+        </select>
+        <input type="submit">
+    </form>
+  </div>   
+</body>
+</html>
+<script src="admin.js"></script>
