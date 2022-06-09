@@ -39,21 +39,24 @@ body{
 #receipe{
     width: 100%;
     height: 600px;
-    border: 3px white solid;
+    border: 4px rgb(126, 233, 5) solid;
     border-radius: 10px;
     display: flex;
 }
 #receipe>div{
-    background-color: teal;
+    margin: 6px;
     border-top-right-radius: 9px;
     border-bottom-right-radius: 9px;
 }
-#receipe>div:hover{
+#receipe>div:last-child{
+    background-color: teal;
+}
+#receipe>div:last-child:hover{
     background-color:coral;
 }
 #receipe>div>img{
     width: 550px;
-    height: 600px;
+    height: 586px;
     border-top-left-radius: 9px;
     border-bottom-left-radius: 9px;
 }
@@ -62,9 +65,6 @@ body{
     color: blue;
     font-weight: 900;
     font-size: larger;
-}
-#receipe>div>h3:hover{
-    color:darkblue;
 }
 #receipe>div>p{
     padding: 20px;

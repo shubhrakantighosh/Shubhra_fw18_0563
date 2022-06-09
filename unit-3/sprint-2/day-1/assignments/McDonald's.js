@@ -6,7 +6,7 @@ for(let checkbox of checkboxs){
     checkbox.addEventListener('click',function(){
         if(this.checked==true){
             array.push(this.value);
-            console.log("yes");
+
             list.innerHTML=text+array.join('/');
         }
         else{

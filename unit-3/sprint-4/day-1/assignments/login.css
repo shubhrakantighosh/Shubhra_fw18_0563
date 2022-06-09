@@ -13,8 +13,8 @@
     #loginUser>input{
         padding: 10px 120px 10px 10px;
         border-radius: 5px;
-        outline: none;
-        border: none;
+        outline: none; 
+        border: none; 
         margin-top: 5px;
         background-color: aquamarine;
     }

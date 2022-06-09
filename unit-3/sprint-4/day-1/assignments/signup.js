@@ -1,4 +1,4 @@
-// document.getElementById('query').innerHTML="";
+
 
 let array=JSON.parse(localStorage.getItem('signup')) ||[];
 signupRegister=()=>{

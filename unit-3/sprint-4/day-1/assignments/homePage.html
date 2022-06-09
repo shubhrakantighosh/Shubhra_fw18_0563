@@ -36,5 +36,14 @@
         localStorage.removeItem("login");
         window.location.reload();
     }
+
+    document.getElementById('home').addEventListener('click',function(){
+        goToHome(1);
+    })
+
+    function goToHome(){
+        window.location.reload();
+    }
+    
 </script>
 <script src="homePage.js"></script>
