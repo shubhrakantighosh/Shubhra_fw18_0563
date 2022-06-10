@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+
+</head>
+<body>
+<div id="main_div">    
+<div id="main">
+   <h2>Add Product</h2>
+    <div>
+        <input type="text" placeholder="Product ID" id="id">
+        <input src="img" placeholder="Image Url" id="image">
+        <input type="text" id="name" placeholder="Product Name">
+        <input type="text" id="price" placeholder="Price">
+        <button onclick="addProduct()">Add Product</button>
+    </div>
+
+    <h2>Delete Product</h2>
+    <div>
+        <input type="text" id="delete" placeholder="Enter Product ID">
+        <button onclick="deleteProduct()">Delete Product</button>
+    </div>
+
+    <h2>Update Product</h2>
+    <div>
+        <input type="text" id="update" placeholder="Enter Product ID">
+        <input type="text" id="update_name" placeholder="Enter Product Name">
+        <button onclick="updateProduct()">Update Product</button>
+    </div>
+</div>
+<div id="show">
+    <h2>Products</h2>
+</div>
+</div>
+</body>
+</html>
+<script src="index.js"></script>
