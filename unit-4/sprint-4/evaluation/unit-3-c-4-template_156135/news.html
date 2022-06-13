@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detailed News</title>
+    <style>
+      #navbar{
+        display: flex;
+        justify-content: space-between;
+      }
+      #main{
+        display: flex;
+      }
+      #slideShow{
+        width: 20%;
+        height: 600px;
+        border: 1px red solid;
+      }
+      #slideShow>img{
+        width: 200px;
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <!-- - The nav-bar will have link for home page(Id:- "home") and link for world news(Id:- "world_news). -->
+      <h3 id="home"><a href="index.html">Home</a></h3>
+      <h3 id="world_news"><a href="worldNews.html">World News</a></h3>
+    </div>
+    <div id="main">
+      <div id="slideShow">
+        <!-- Sidebar will have
+         - Image of user (Id:- "user_img")
+  - Name of user (Id:- "user_name")
+  - Email of user (Id:- "user_email")
+  - Country of user (Id:- "user_country) -->
+      </div>
+      <div id="detailed_news">
+        <!-- - The detailed news will be appended inside div with Id as "detailed_news", which will have following:-
+      * Image tag for image
+      * H3 tag for title
+      * H4 tag for description -->
+      </div>
+    </div>
+  </body>
+</html>
+<script src="/scripts/news.js"></script>
+<script type="module">
+  import {image,h3,h4,h5} from '/slideshow.js';
+  document.getElementById('slideShow').append(image,h3,h4,h5);
+</script>
