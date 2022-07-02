@@ -1,7 +1,6 @@
 import java.util.Arrays;
 public class Main1{
     public int[] findAndReturnPrimeNumbers(int[] inputArray){
-        String container="";
         int i=0;
         int[] primeArray=new int[inputArray.length];
         int a=0;

@@ -14,10 +14,7 @@ public class Student {
     }
     public static void main(String[] args) {
         Student studentData=new Student();
-        studentData.age=6;
-        studentData.marks=10;
-        studentData.name="Shubhra";
-        studentData.roll=27;
+        studentData.checkStudentDetails(27,"Chirag",6,10);
 
         Student data=new Student();
         data.checkStudentDetails(78,"shubhra",24,945);
