@@ -1,0 +1,28 @@
+Explain the difference between overloading and overriding methods with an example?
+Answer: In java Overloading methods means we are using the same function name but parameters are the difference 
+that case we used to call overloading.
+For an Example:
+
+public class Overloading {
+    public void fun(int number){
+        System.out.println(number);
+    }
+    public void fun(String name){
+        System.out.println(name);
+    }
+
+    public static void main(String[] args) {
+        Overloading parameter=new Overloading();
+        parameter.fun(5);
+        parameter.fun("shubhra");
+    }
+}
+ 
+In this case, the parameter is different but the name of the function is the same compiler understands which function depending on the parameter it's going to execute
+that parameter is passing the data to that particular function.
+
+ 
+And in the other case Overriding means, the function name and the parameter are also the same its called overriding. the meaning of the word override means it overrides 
+the new one so basically in our Java programing it works the same as if we won't do some changes to that particular function without changing his name or changing
+ his whole thing What we can do is we can create a function using his same whatever the thing which we will add this function before declaring the function n we just 
+simply type "Overriding " is gonna override that thing. That's all about overriding function.
