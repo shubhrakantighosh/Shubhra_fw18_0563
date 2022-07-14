@@ -1,25 +1,20 @@
-//package question1;
-//
-//public class HistoryStudent extends question2.Student{
-//
-//    int historyMarks;
-//    int civicsMarks;
-//
-//    public HistoryStudent(String name, String address) {
-//
-//        super(name, address);
-//
-//    }
-//
-//    @Override
-//    public int getPercentage() {
-//
-//        int agv=this.historyMarks+this.civicsMarks/2;
-//
-//        if(agv<=100){
-//
-//            return agv;
-//        }
-//        else return 0;
-//    }
-//}
+package question1;
+
+public class HistoryStudent extends Student{
+
+    int historyMarks;
+    int civicsMarks;
+
+
+    public HistoryStudent(String name, String address, int historyMarks, int civicsMarks) {
+        super(name, address);
+        this.historyMarks = historyMarks;
+        this.civicsMarks = civicsMarks;
+    }
+
+    @Override
+    public float getPercentage() {
+
+        return (float) (this.historyMarks+this.civicsMarks/2);
+    }
+}

@@ -17,19 +17,9 @@ public class ScienceStudent extends Student{
     }
 
     @Override
-     public void getPercentage() {
+     public float getPercentage() {
 
-        int agv=(this.chemistryMarks+this.mathsMarks+this.phisicsMarks)/3;
-
-        if(agv<=100){
-
-//            return agv;
-            System.out.println(name);
-            System.out.println(address);
-            System.out.println(agv);
-        }
-//        else return 0;
-        else System.out.println("Wrong Input");
+        return (float)(chemistryMarks+mathsMarks+phisicsMarks)/3;
 
     }
 }
