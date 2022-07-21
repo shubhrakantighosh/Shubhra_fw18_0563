@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
+import java.time.temporal.ChronoUnit;
 
 public class Main {
 
@@ -20,12 +21,14 @@ public class Main {
             LocalDate userStart=LocalDate.parse(start, DateTimeFormatter.ofPattern("dd-MM-yyy"));
             LocalDate userEnd=LocalDate.parse(end, DateTimeFormatter.ofPattern("dd-MM-yyy"));
 
-            if(userEnd.getYear()>userStart.getYear()){
+            long userTotalDays=ChronoUnit.DAYS.between(userStart,userEnd);
 
-                Period period=Period.between(userStart,userEnd);
-                System.out.println(period.toTotalMonths()*4);
+            if(userEnd.getYear()>=userStart.getYear()){
 
-            }else System.out.println("End date should be Bigger than start date ");
+                System.out.println("Total Days : "+userTotalDays);
+
+            } else System.out.println("End date should be Bigger than start date ");
+
 
 
         }catch (Exception e){
