@@ -1,0 +1,13 @@
+Upper bounded wildcards :
+upper bounded wildcards it used for relax the restrions an a variable.
+ For an Example :
+_UpperBoundedWildcards.java
+
+
+=========================================================================
+
+lower bounded wildcards :
+lower bounded wildcars it used for specific of the super class.
+For an Example :
+_LowerBoundedWildcards.java
+
