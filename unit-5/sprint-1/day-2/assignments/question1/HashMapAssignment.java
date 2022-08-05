@@ -1,11 +1,11 @@
 package question1;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class HashMapAssignment {
 
     public static void main(String[] args) {
-
         HashMap<String,String>hashMap=new HashMap<>();
         hashMap.put("West Bengal","Kolkata");
         hashMap.put("Madhya Pradesh","Bhopal");
