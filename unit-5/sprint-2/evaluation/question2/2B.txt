@@ -1,0 +1,8 @@
+(Q) Write a program that will result in a deadlock. How will you fix deadlock in Java show with
+examples?
+
+Answers-> In our Java deadlock two or more threads are waiting but if we try to get a result if the speel for 5 seconds so the second 
+the thread also executes at the same time so basically so we will get output at the same same time to fix this issue we can use 
+synchronized. So when the 1st thread going for executing the 2nd oner it is waiting for him up to the 1st execution. When the 1st is done
+completely the second going to execute Basically they are waiting in a queue. But there is a problem there it doesn't necessary 1st one 
+is going for executing the 1st  it can be 2nd.
