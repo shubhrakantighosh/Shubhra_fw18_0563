@@ -8,11 +8,13 @@ Primary Key :->
 ( d) To create a Primary key using table - create table abc ( id int, name varchar( 3 ), primary key ( id ) );
 
 Unique Key :->
+
 ( a ) Unique keys help us to maintain the same things in a different table. for example on a table 
 we store students' names and id on a table and on another table we store students' addresses, and phone numbers. 
 To justify in the same table we use Unique Key.
 ( b ) It can be null. This means it can store null values.
 ( c ) it can be duplicated.
+
 
 ( 2 ) : 
 
