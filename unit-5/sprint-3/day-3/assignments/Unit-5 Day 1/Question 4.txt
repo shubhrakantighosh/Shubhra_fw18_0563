@@ -1,0 +1,47 @@
+mysql> create table Person(personId int, lastName varchar(20) ,firstName varchar(20),primary key(personId));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into Person values(1 ,"Wang", "Allen");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Person values(2, "Alice", "Bob");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> create table Address(addressId int, personId int not null, city varchar(20) ,state varchar(20),primary key(addressId));
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into Address values(1 , 2 , "New York City","New York");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Address values(2 , 3 , "San Diego" ,"California");
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Person; select * from Address;
++----------+----------+-----------+
+| personId | lastName | firstName |
++----------+----------+-----------+
+|        1 | Wang     | Allen     |
+|        2 | Alice    | Bob       |
++----------+----------+-----------+
+2 rows in set (0.00 sec)
+
++-----------+----------+---------------+------------+
+| addressId | personId | city          | state      |
++-----------+----------+---------------+------------+
+|         1 |        2 | New York City | New York   |
+|         2 |        3 | San Diego     | California |
++-----------+----------+---------------+------------+
+2 rows in set (0.00 sec)
+
+
+
+( 1 ) :
+
+mysql> select firstname, lastname, city, state from Person Left Join Address ON Person.personId=Address.personId;
++-----------+----------+---------------+----------+
+| firstname | lastname | city          | state    |
++-----------+----------+---------------+----------+
+| Allen     | Wang     | NULL          | NULL     |
+| Bob       | Alice    | New York City | New York |
++-----------+----------+---------------+----------+
+2 rows in set (0.00 sec)

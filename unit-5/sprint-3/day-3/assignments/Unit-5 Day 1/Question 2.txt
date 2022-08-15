@@ -1,0 +1,57 @@
+mysql> select * from Movie; select * from Movie_Rating;
++----+-----------------+----------------+------+----------------+
+| id | title           | Director       | year | length_minutes |
++----+-----------------+----------------+------+----------------+
+|  1 | Toy Story       | John Lasseter  | 1995 |             81 |
+|  2 | A Bug's Life    | John Lasseter  | 1998 |             95 |
+|  3 | Toy Story 2     | John Lasseter  | 1999 |             93 |
+|  4 | Monsters, Inc.  | Pete Docter    | 2001 |             92 |
+|  5 | Civil War       | Andrew Stanton | 2003 |            107 |
+|  6 | The Incredibles | Brad Bird      | 2004 |            116 |
++----+-----------------+----------------+------+----------------+
+6 rows in set (0.00 sec)
+
++----------+--------+----------------+---------------------+
+| movie_id | rating | domestic_sales | international_sales |
++----------+--------+----------------+---------------------+
+|        1 |      7 | 268492764      | 475066843           |
+|        2 |      6 | 191452396      | 368400000           |
+|        3 |      8 | 206445654      | 417277164           |
+|        4 |      8 | 245852179      | 239163000           |
+|        5 |      8 | 380843261      | 555900000           |
+|        6 |      8 | 261441092      | 370001000           |
++----------+--------+----------------+---------------------+
+6 rows in set (0.00 sec)
+
+
+( 1 ) :
+
+
+mysql> select title,domestic_sales,international_sales from Movie INNER JOIN Movie_Rating ON Movie.id=Movie_Rating.movie_id;
++-----------------+----------------+---------------------+
+| title           | domestic_sales | international_sales |
++-----------------+----------------+---------------------+
+| Toy Story       | 268492764      | 475066843           |
+| A Bug's Life    | 191452396      | 368400000           |
+| Toy Story 2     | 206445654      | 417277164           |
+| Monsters, Inc.  | 245852179      | 239163000           |
+| Civil War       | 380843261      | 555900000           |
+| The Incredibles | 261441092      | 370001000           |
++-----------------+----------------+---------------------+
+6 rows in set (0.00 sec)
+
+
+( 2 ) :
+
+mysql> select * from Movie INNER JOIN Movie_Rating ON Movie.id=Movie_Rating.movie_id order by rating desc;
++----+-----------------+----------------+------+----------------+----------+--------+----------------+---------------------+
+| id | title           | Director       | year | length_minutes | movie_id | rating | domestic_sales | international_sales |
++----+-----------------+----------------+------+----------------+----------+--------+----------------+---------------------+
+|  3 | Toy Story 2     | John Lasseter  | 1999 |             93 |        3 |      8 | 206445654      | 417277164           |
+|  4 | Monsters, Inc.  | Pete Docter    | 2001 |             92 |        4 |      8 | 245852179      | 239163000           |
+|  5 | Civil War       | Andrew Stanton | 2003 |            107 |        5 |      8 | 380843261      | 555900000           |
+|  6 | The Incredibles | Brad Bird      | 2004 |            116 |        6 |      8 | 261441092      | 370001000           |
+|  1 | Toy Story       | John Lasseter  | 1995 |             81 |        1 |      7 | 268492764      | 475066843           |
+|  2 | A Bug's Life    | John Lasseter  | 1998 |             95 |        2 |      6 | 191452396      | 368400000           |
++----+-----------------+----------------+------+----------------+----------+--------+----------------+---------------------+
+6 rows in set (0.00 sec)
