@@ -1,0 +1,45 @@
+mysql> create database evaluation;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use evaluation;
+Database changed
+mysql> create table Employee;
+ERROR 4028 (HY000): A table must have at least one visible column.
+mysql> create table Employee(id int, name varchar(20),salary int,managerId int,primary key(id));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> insert into Employee(1,"Joe",70000,3);
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1,"Joe",70000,3)' at line 1
+mysql> insert into Employee values(1,"Joe",70000,3);
+Query OK, 1 row affected (0.03 sec)
+
+mysql> insert into Employee values(2,"Henry",80000,4);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(3,"Sam",60000,Null);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(3,"Max",90000,Null);
+ERROR 1062 (23000): Duplicate entry '3' for key 'employee.PRIMARY'
+mysql> insert into Employee values(4,"Max",90000,Null);
+Query OK, 1 row affected (0.01 sec)
+
+
+mysql> select * from Employee;
++----+-------+--------+-----------+
+| id | name  | salary | managerId |
++----+-------+--------+-----------+
+|  1 | Joe   |  70000 |         3 |
+|  2 | Henry |  80000 |         4 |
+|  3 | Sam   |  60000 |      NULL |
+|  4 | Max   |  90000 |      NULL |
++----+-------+--------+-----------+
+4 rows in set (0.00 sec)
+
+mysql> select name from Employee where managerId >1 AND name="Joe";
++------+
+| name |
++------+
+| Joe  |
++------+
+1 row in set (0.00 sec)
