@@ -125,5 +125,3 @@ mysql> select EmpName from Employee where Department in(select DeptId from EmpDe
 | Abhishek |
 +----------+
 1 row in set (0.00 sec)
-
-mysql>
