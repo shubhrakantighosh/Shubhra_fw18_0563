@@ -1,0 +1,13 @@
+Q1) Differentiate between JRE,JVM and JDK?
+
+Answer: The full of the JRE, JVM and JDK are JRE(Java Runtime Environment), JVM(Java Virtual Machine), and JDK(Java Development Kit).
+
+JRE helps us convert that .java file to .class means converting to a byte code. That byte code file can read any operating system like Windows, Mac, Linux, Ubuntu etc.
+For Example: In the windows operating system if we convert the file .class menas byte code. and if we share the .class file with any operating like Mac that
+ the system can easily readable.
+
+JVM is the virtual machine of java. We can run that file in our operating system by using any Intellij like that kind of software in our command.
+
+JDK is a development kit of java that helps us run the file in our computer system.
+For Example Intellij etc.
+

@@ -18,7 +18,7 @@ public class PermanentEmployee extends Employee{
         calculateSalary();
     }
 
-     void calculateSalary(){
+     public void calculateSalary(){
 
         double pFAmount =basicPay*0.12;
         setSalary(basicPay-pFAmount);

@@ -1,6 +1,6 @@
 package question1;
 
-public class Employee {
+public abstract class Employee {
 
     private int employeeId;
     private String employeeName;
@@ -37,16 +37,5 @@ public class Employee {
         this.employeeName = employeeName;
     }
 
-    void calculateSalary(Loan loan){
-
-//        if(loan instanceof PermanentEmployee){
-//
-//            double pFAmount =basicPay*0.12;
-//            setSalary(basicPay-pFAmount);
-//
-//        } else if (loan instanceof TemporaryEmployee) {
-//            setSalary(hoursWorked*hourlyWages);
-//        }
-
-    }
+    public abstract void calculateSalary();
 }

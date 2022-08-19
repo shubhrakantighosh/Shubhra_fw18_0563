@@ -13,7 +13,7 @@ public class TemporaryEmployee extends Employee{
         calculateSalary();
     }
 
-    void calculateSalary(){
+    public void calculateSalary(){
 
         setSalary(hoursWorked*hourlyWages);
 

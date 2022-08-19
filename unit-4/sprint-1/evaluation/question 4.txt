@@ -1,0 +1,25 @@
+
+Q4) Differentiate between static and non-static variables?
+
+Answer: In java language, static is a reserved keyword. We cant use this keyword for like declaring a variable int static=1; So, what is the use is keyword using 
+this keyword can data be stored in ram that is the beauty thing in java. and reaming thigs those function or declare variable its called non-static is this case 
+the data store in the hard disk it's not complying in GPU.  But we can the non-static variable in the static variable using some keyword, 1stly we in the static
+function we call the main class we have to create an object. Using this  object and with the help of the "new" keyword we can pass the value in that non-static
+ function in his parameter and basically that non-static function using the "new" keyword helps to a computer that hard file push to ram now in this way we can
+simply di this work from static function to non-static function. 
+
+For Example:
+
+public class Example {
+
+    //non-static function
+    void sum(int a){
+        System.out.println(a+1);
+    }
+
+    //main static function
+    public static void main(String[] args) {
+        Example sumOfA=new Example();
+        sumOfA.sum(4);
+    }
+}
