@@ -1,0 +1,45 @@
+JDBC Connection :
+
+ Step 1: We have to create a class and declare the main function.
+ Step 2: In that main function we have to set our Driver 1st but after Java 1.8 we don't have to define 
+but it's recommended to be defined otherwise it's it will work the normal way.
+ Step 3: We have to set our URL.
+ Step 4: The last step is we have to check the connection it's getting connected or using DriverManager.   
+
+Here is an example :
+
+package com.masai;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.mysql.cj.jdbc.Driver;
+
+public class JDBCConnection {
+	
+	public static void main(String[] args) {
+		
+		
+		try {
+			Driver driver=new Driver();
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		
+		String url="jdbc:mysql://localhost:3306/db1";
+		
+		try (Connection connection=DriverManager.getConnection(url,"root","root")){
+			
+			System.out.println("It's connected to Database db1");
+			
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		}
+		
+	}
+
+}
