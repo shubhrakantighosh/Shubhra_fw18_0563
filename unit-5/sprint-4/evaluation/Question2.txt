@@ -1,0 +1,13 @@
+mysql> select department, name, salary from employee where Department in(select id from Department where Employee.department=Department.id) order by salary desc;
++------------+-------+--------+
+| department | name  | salary |
++------------+-------+--------+
+|          1 | Max   |   9000 |
+|          1 | Joe   |   8500 |
+|          1 | Randy |   8500 |
+|          2 | Herny |   8000 |
+|          1 | Will  |   7000 |
+|          1 | Janet |   6900 |
+|          2 | Sam   |   6000 |
++------------+-------+--------+
+7 rows in set (0.00 sec)
