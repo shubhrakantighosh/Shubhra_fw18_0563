@@ -1,0 +1,5 @@
+In our java suppose we create an application where only student class objects going to add if I didn’t 
+Declared any generics it and hold anything like single integer, string, double, teacher class object, null etc.
+Now the problem is if we try to find the name of the student whose height marks in his class, we will get ClassCastException
+ because it’s not going to sort according to our needs. So, it’s always recommended to add generics. Generics give us Type Safety.
+That’s all about.

@@ -1,18 +1,12 @@
 package com.masai.Question3;
 
 public class Book {
+
 	
-	private int bookId;
 	private String bookName;
 	private String BookAuthor;
 	
 	
-	public int getBookId() {
-		return bookId;
-	}
-	public void setBookId(int bookId) {
-		this.bookId = bookId;
-	}
 	public String getBookName() {
 		return bookName;
 	}
@@ -27,9 +21,8 @@ public class Book {
 	}
 	
 	
-	public Book(int bookId, String bookName, String bookAuthor) {
+	public Book(String bookName, String bookAuthor) {
 		super();
-		this.bookId = bookId;
 		this.bookName = bookName;
 		BookAuthor = bookAuthor;
 	}
@@ -37,8 +30,8 @@ public class Book {
 	
 	@Override
 	public String toString() {
-		return "Book [bookId=" + bookId + ", bookName=" + bookName + ", BookAuthor=" + BookAuthor + "]";
+		return "Book [bookName=" + bookName + ", BookAuthor=" + BookAuthor + "]";
 	}
 
-
+	
 }

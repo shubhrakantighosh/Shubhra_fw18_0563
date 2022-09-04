@@ -1,0 +1,3 @@
+PirorityQueue and LinkedList both work in the same way but the difference is if trying to add anything to the PriorityQueue and LinkedList it will add both of them in the PriorityQueue it will store in the natural ordering but in the LinkedList, it will be added which order we are stored the LinkedList.
+Suppose we are trying to sort student class as per our need so we just override the comparable method and the out will be the which sequence we want that list but in this LinkedList is not going to work. LinkedList also doesn’t support the Comparator method but PirorityQueue Support.
+
