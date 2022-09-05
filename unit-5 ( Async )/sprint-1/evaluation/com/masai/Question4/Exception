@@ -1,0 +1,5 @@
+In the problem first, it will print ‘A’ because there is no issue before there is no statement is there
+ so it will simply print ‘A’. Then next line there is a logical mistake there based on an exception 
+ it will find ArithmeticException so in this catch block it will print ‘C’ in case it can handle this 
+ ArithmeticException. If there is any case it can’t handle so it will go Exception catch block
+  this Exception parent of the Exceptions. That’s all about.
