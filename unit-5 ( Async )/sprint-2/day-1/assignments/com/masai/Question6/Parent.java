@@ -1,7 +1,7 @@
 package com.masai.Question6;
 
 
-public class Parent{
+class Parent{
 	
 	Parent() throws Exception{
 		

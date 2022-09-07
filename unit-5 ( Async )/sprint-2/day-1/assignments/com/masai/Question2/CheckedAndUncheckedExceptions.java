@@ -22,8 +22,7 @@ public class CheckedAndUncheckedExceptions {
 	public void UnCheckedEException() throws ClassNotFoundException {
 		
 		
-		Object obj=new Student;
-
+		new Main(null);
 		
 	}
 	
