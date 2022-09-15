@@ -1,0 +1,7 @@
+            Thread                Vs             Process
+(i)	    Thread is a sub-process.      (i)   Process means any programming executing.                                  
+(ii)	It has a shared memory.       (ii)  It allocates different memory.
+(iii)	It’s lightweight.             (iii) it’s a heavyweight.
+(iv)	It takes less time to         (iv)  It takes much more time to
+        complete all the tasks.              complete all the tasks.
+

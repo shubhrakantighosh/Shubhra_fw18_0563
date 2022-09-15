@@ -1,0 +1,6 @@
+Difference between call Java run() method vs start() method :
+
+If we call the run() method so will call like the normal method we used
+ to call. so, it won’t come work 2 or more different threads at the same time.
+But if we call the start() method so 1st it will do some thread scheduling 
+operations and it will work parallel with other threads.

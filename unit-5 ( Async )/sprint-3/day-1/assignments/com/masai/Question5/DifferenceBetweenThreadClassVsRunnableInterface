@@ -1,0 +1,23 @@
+Difference between Thread class vs Runnable interface:
+
+Using thread: Suppose we are extending another class with thread. 
+So, here to get thread functionality we have to override the run method. 
+Then in the run method, we can do tasks whatever we want. form the main class
+we just create a constructor of the particular class and after creating the 
+Object of the class we just simply do the class name. start() so it will execute
+all the tasks.But the main problem is once expanding the thread class we cannot 
+extend another which is very dis advantage is there. So instead of using Thread, 
+we can use the Runnable interface so it will also work in the same manner and 
+the good thing is we can extend another class as well. That is the main benefit of 
+using the Runnable interface.
+
+Sodo Code of Thread class:
+
+class Thread implements Runnable{
+	@Override
+	public void run() {	
+	}
+	public void start(){
+		run();
+	}
+} 

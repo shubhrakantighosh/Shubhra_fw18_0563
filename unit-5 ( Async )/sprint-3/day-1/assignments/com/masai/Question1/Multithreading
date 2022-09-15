@@ -1,0 +1,17 @@
+Multithreading:
+
+Multithreading is a process which it can run simultaneously run multiple threads 
+at the same time. For example, we want to do some tasks using our applications,
+but we don’t have that much time. The problem is it will execute one by one. So,
+It will take so much time for this but here using thread we have a couple of 
+advantages is there like it every thread is independent so will run, it doesn’t
+wait for another thread will complete its work. it also takes low memory space 
+like it can share their memory. and the good thing is if an Exception occurs, 
+it can handle it. It will doesn’t affect another thread. That’s all about.
+
+The important part is ->
+
+(i)	    It will take less time to execute because all threads are working simultaneously.
+(ii)	It shared memory, so it is lightweight.
+(iii)	If any thread exceptions occur it can handle it. It won’t affect another thread.
+

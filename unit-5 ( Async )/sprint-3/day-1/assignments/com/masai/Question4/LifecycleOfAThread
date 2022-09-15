@@ -1,0 +1,7 @@
+States of a thread or lifecycle of a thread:
+There are five states is there is a thread.
+(i)	    New State. (So, the new state is like “Thread thread=new Thread (constructor of the class)”. It is an initialized state. );
+(ii)	Runnable state. (When we do “thread.start()” . it will run.)
+(iii)	Blocked state.( Blocked states like when doing some performance on that particular thread like sleep, wait, join.)
+(iv)	Running state.( With the help of thread scheduler, its scheduling.)
+(v)	    Dead state.( When it completes all the tasks.)
