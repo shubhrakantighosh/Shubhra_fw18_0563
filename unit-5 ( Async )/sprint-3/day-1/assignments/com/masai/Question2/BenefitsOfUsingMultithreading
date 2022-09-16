@@ -1,4 +1,4 @@
 Benefits of using Multithreading->
-(i)	    It will take less time to execute because all threads are working simultaneously.
+(i)	  It will take less time to execute because all threads are working simultaneously.
 (ii)	It shared memory, so it is lightweight.
 (iii)	If any thread exceptions occur it can handle it. It won’t affect another thread.
