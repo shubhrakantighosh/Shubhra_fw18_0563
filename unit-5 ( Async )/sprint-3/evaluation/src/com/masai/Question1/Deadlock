@@ -1,0 +1,8 @@
+Deadlock: 
+
+A deadlock is a state where two or more states waiting for each other. 
+If we extend the Thread class or implement Runnable, the run class will
+ be overridden when we try to start those methods, it going to be printed 
+ one by one simultaneously. But if we use synchronized it going to wait 
+ for the queue stage where each of us is going to wait for each other. 
+ That’s all about.
