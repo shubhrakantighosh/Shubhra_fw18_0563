@@ -1,0 +1,61 @@
+( 1 ) :
+
+mysql> select count(name) from student;
++-------------+
+| count(name) |
++-------------+
+|           7 |
++-------------+
+1 row in set (0.01 sec)
+
+
+
+( 2 ) :
+
+mysql> select count(name) from student where BRANCH like "E%";
++-------------+
+| count(name) |
++-------------+
+|           4 |
++-------------+
+1 row in set (0.00 sec)
+
+
+
+( 3 ) :
+
+mysql> alter table student add MARKS INT(8);
+Query OK, 0 rows affected, 1 warning (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 1
+
+
+( 4 ) :
+
+mysql> alter table student MODIFY name varchar(25);
+Query OK, 0 rows affected (0.02 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+
+( 5 ) :
+
+mysql> delete from student where BRANCH="ETC";
+Query OK, 3 rows affected (0.01 sec)
+
+
+( 6 ) :
+
+mysql> alter table student RENAME TO STUDENTINFORMATION;
+Query OK, 0 rows affected (0.03 sec)
+
+
+( 7 ) :
+
+mysql> delete from studentinformation;
+Query OK, 4 rows affected (0.00 sec)
+
+
+( 8 ) :
+
+mysql> drop table studentinformation;
+Query OK, 0 rows affected (0.02 sec)
