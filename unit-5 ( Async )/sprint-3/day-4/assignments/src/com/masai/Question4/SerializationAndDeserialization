@@ -1,0 +1,14 @@
+Serialization:
+
+Serialization is a conversation in a state of an object into a byte stream.
+which can then save to a database or transfer over a network.
+Method:
+ObjectOutputStream objectOutputStream=new ObjectOutputStream(new FileOutputStream("text.txt"));
+
+
+Deserialization:
+
+Deserialization is the process of reconstructing the object from the serialized 
+state. It is the reserve operation of serialization.
+Method:
+ObjectInputStream obInputStream=new ObjectInputStream(new FileInputStream("text.txt"));
