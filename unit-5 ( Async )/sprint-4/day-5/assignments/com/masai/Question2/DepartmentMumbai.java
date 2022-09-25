@@ -21,7 +21,7 @@ public class DepartmentMumbai {
 		
 		try (Connection connection=DriverManager.getConnection(url,"root","root")) {
 			
-			PreparedStatement preparedStatement=connection.prepareStatement(" select * from department where did in (select deptid from employee where department.did=employee.deptid );");
+			PreparedStatement preparedStatement=connection.prepareStatement("select did,dname,location from department JOIN employee on employee.deptid=department.did AND address='Mumbai';");
 			ResultSet resultSet=preparedStatement.executeQuery();
 			
 			while(resultSet.next()) {
