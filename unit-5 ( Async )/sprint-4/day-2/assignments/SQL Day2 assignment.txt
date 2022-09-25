@@ -1,0 +1,72 @@
+( 1 ) : 
+
+
+order_placed_date<'2017-01-01' group by customers.email order by orders_count desc;
++---------------+--------------+
+| email         | orders_count |
++---------------+--------------+
+| abc@gmail.com |            2 |
+| efg@gmail.com |            1 |
++---------------+--------------+
+2 rows in set (0.01 sec)
+
+
+
+( 1 ) :
+
+
+
+
+
+( 2 ) :
+
+
+
+
+( 3 ) :
+
+
+mysql> select * from worker where worker_id%2=0;
++-----------+------------+-----------+--------+---------------------+------------+
+| WORKER_ID | FIRST_NAME | LAST_NAME | SALARY | JOINING_DATE        | DEPARTMENT |
++-----------+------------+-----------+--------+---------------------+------------+
+|         2 | Niharika   | Verma     |  80000 | 2014-06-11 09:00:00 | Admin      |
+|         4 | Amitabh    | Singh     | 500000 | 2014-02-20 09:00:00 | Admin      |
+|         6 | Vipul      | Diwan     | 200000 | 2014-06-11 09:00:00 | Account    |
+|         8 | Geetika    | Chauhan   |  90000 | 2014-04-11 09:00:00 | Admin      |
++-----------+------------+-----------+--------+---------------------+------------+
+4 rows in set (0.00 sec)
+
+
+
+( 4 )  :
+
+
+
+mysql> select department, count(department)No_Of_Employees from worker group by department order by count(department) desc;
++------------+-----------------+
+| department | No_Of_Employees |
++------------+-----------------+
+| Admin      |               4 |
+| HR         |               2 |
+| Account    |               2 |
++------------+-----------------+
+3 rows in set (0.00 sec)
+
+
+
+( 5 ) :
+
+mysql> select salary,count(salary)Same_Salary from worker group by salary order by salary desc;
++--------+-------------+
+| salary | Same_Salary |
++--------+-------------+
+| 500000 |           2 |
+| 300000 |           1 |
+| 200000 |           1 |
+| 100000 |           1 |
+|  90000 |           1 |
+|  80000 |           1 |
+|  75000 |           1 |
++--------+-------------+
+7 rows in set (0.00 sec)
