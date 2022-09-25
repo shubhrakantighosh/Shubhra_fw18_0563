@@ -328,6 +328,18 @@ mysql> select * from borrow where AMOUNT NOT BETWEEN 2000 AND 8000;
 
 ( 18 ) :
 
+mysql> select distinct * from deposit;
++-------+---------+-----------+--------+------------+
+| ACTNO | CNAME   | BNAME     | AMOUNT | ADATE      |
++-------+---------+-----------+--------+------------+
+| 100   | ANIL    | VRCE      |   1210 | 1995-03-01 |
+| 101   | SUNIL   | MGROAD    |   5000 | 1996-01-04 |
+| 102   | RAHUL   | KAROLBAGH |   3500 | 1995-11-17 |
+| 103   | MADHURI | CHANDNI   |   1200 | 1995-12-17 |
+| 104   | PRAOMOD | MGROAD    |   3000 | 1996-03-27 |
+| 105   | SANDIP  | KARLOBAGH |   2000 | 1996-03-31 |
++-------+---------+-----------+--------+------------+
+6 rows in set (0.00 sec)
 
 
 
