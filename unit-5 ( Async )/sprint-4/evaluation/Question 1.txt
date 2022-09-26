@@ -1,0 +1,87 @@
+( *  ) :
+
+mysql> select * from student;
++------+--------+-----------+------------+
+| roll | name   | address   | mobile     |
++------+--------+-----------+------------+
+|   11 | Venkat | Bihar     | 9077654320 |
+|   12 | Amit   | Kolkata   | 7044063695 |
+|   13 | Raj    | Pune      | 9830334453 |
+|   14 | Binay  | Bangalore | 6789024680 |
+|   15 | Suresh | Jaipur    | 8906789067 |
++------+--------+-----------+------------+
+5 rows in set (0.00 sec)
+
+
+
+( *  ) :
+
+mysql> select * from Course;
++-----+-----------+--------+----------+
+| cid | cname     | fee    | duration |
++-----+-----------+--------+----------+
+|  11 | Java      | 300000 | 60       |
+|  12 | Spring    | 200000 | 30       |
+|  13 | Hibernaet | 250000 | 25       |
+|  14 | React     |  60000 | 90       |
+|  15 | Angular   |  40000 | 70       |
++-----+-----------+--------+----------+
+5 rows in set (0.00 sec)
+
+
+
+
+( * ) :
+
+mysql> insert into CourseStudent values(12,11);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CourseStudent values(12,12);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CourseStudent values(11,11);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into CourseStudent values(11,14);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CourseStudent values(13,12);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CourseStudent values(13,15);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CourseStudent values(15,11);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CourseStudent values(15,13);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CourseStudent values(15,14);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into CourseStudent values(14,14);
+Query OK, 1 row affected (0.00 sec)
+
+
+( * ) :
+
+mysql> select * from CourseStudent;
++--------------+-----------+
+| Student_Roll | Course_ID |
++--------------+-----------+
+|           12 |        11 |
+|           12 |        12 |
+|           11 |        11 |
+|           11 |        14 |
+|           13 |        12 |
+|           13 |        15 |
+|           15 |        11 |
+|           15 |        13 |
+|           15 |        14 |
+|           14 |        14 |
++--------------+-----------+
+10 rows in set (0.00 sec)
+
+
+

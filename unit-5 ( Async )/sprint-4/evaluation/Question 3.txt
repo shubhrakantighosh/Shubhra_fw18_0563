@@ -1,0 +1,7 @@
+Types of relationships:
+One-to-one relationship ->
+Here it is only applicable for one to one for an example husband-wife;
+One to Many relationships->
+In this case, it’s applicable for example Java courses can assign many students. So, it’s called one too many relationships.
+Many to Many relationships ->
+In this case, for example, friend to friend. In this case, one friend has many friends and that friends also have friends. It’s called many to many.

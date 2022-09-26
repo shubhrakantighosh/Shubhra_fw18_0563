@@ -1,0 +1,100 @@
+( * ) :
+
+mysql> select * from department;
++-----+-----------+-----------+
+| did | dname     | location  |
++-----+-----------+-----------+
+|  11 | Account   | Kolkata   |
+|  12 | Sales     | Bangalore |
+|  13 | Marketing | Pune      |
+|  14 | HR        | Hydrabad  |
++-----+-----------+-----------+
+4 rows in set (0.00 sec)
+
+
+mysql> insert into Employee values(101, 'Ram', 'Kolkata', '7044063695', 50000, 11);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(102, 'Shyam', 'Pune', '7045807659', 55000, 11);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(103, 'Madhu', 'Kolkata', '7066154769', 70000, 12);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Employee values(104, 'Rupesh', 'Hydrabad', '9088976891', 75000, 12);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(105, 'Alex', 'Bangalore', '6789246791', 55000, 12);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Employee values(106, 'Albert', 'Chennai', '8081818171', 95000, 13);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(107, 'Yuki', 'Assam', '7728384747', 65000, 13);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into Employee values(108, 'Poltu', 'Rajasthan', '906681818', 125000, 14);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into Employee values(109, 'Santu', 'Kerela', '838485858', 145000, 14);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from Employee;
++-------+--------+-----------+------------+--------+--------+
+| empId | ename  | address   | mobile     | salary | deptId |
++-------+--------+-----------+------------+--------+--------+
+|   101 | Ram    | Kolkata   | 7044063695 |  50000 |     11 |
+|   102 | Shyam  | Pune      | 7045807659 |  55000 |     11 |
+|   103 | Madhu  | Kolkata   | 7066154769 |  70000 |     12 |
+|   104 | Rupesh | Hydrabad  | 9088976891 |  75000 |     12 |
+|   105 | Alex   | Bangalore | 6789246791 |  55000 |     12 |
+|   106 | Albert | Chennai   | 8081818171 |  95000 |     13 |
+|   107 | Yuki   | Assam     | 7728384747 |  65000 |     13 |
+|   108 | Poltu  | Rajasthan | 906681818  | 125000 |     14 |
+|   109 | Santu  | Kerela    | 838485858  | 145000 |     14 |
++-------+--------+-----------+------------+--------+--------+
+9 rows in set (0.00 sec)
+
+
+
+( * ) :
+
+mysql> select dname, sum(employee.salary)Sum from department INNER JOIN Employee On Employee.deptid=department.did group by dname;
++-----------+--------+
+| dname     | Sum    |
++-----------+--------+
+| Account   | 105000 |
+| Sales     | 200000 |
+| Marketing | 160000 |
+| HR        | 270000 |
++-----------+--------+
+4 rows in set (0.00 sec)
+
+
+( * ) :
+
+mysql> select  empId,ename, address ,mobile , salary ,deptId from employee INNER JOIN Department On Employee.deptid=department.did AND Department.dname='Sales';
++-------+--------+-----------+------------+--------+--------+
+| empId | ename  | address   | mobile     | salary | deptId |
++-------+--------+-----------+------------+--------+--------+
+|   103 | Madhu  | Kolkata   | 7066154769 |  70000 |     12 |
+|   104 | Rupesh | Hydrabad  | 9088976891 |  75000 |     12 |
+|   105 | Alex   | Bangalore | 6789246791 |  55000 |     12 |
++-------+--------+-----------+------------+--------+--------+
+3 rows in set (0.01 sec)
+
+
+( * ) :
+
+mysql> select did,dname,location from department  INNER JOIN Employee On Employee.deptid=department.did AND Employee.empid=101;
++-----+---------+----------+
+| did | dname   | location |
++-----+---------+----------+
+|  11 | Account | Kolkata  |
++-----+---------+----------+
+1 row in set (0.00 sec)
+
+
+( * ) :
+
+mysql> select  empId,ename, address ,mobile , salary ,deptId from employee where max(salary)>max(salary);
