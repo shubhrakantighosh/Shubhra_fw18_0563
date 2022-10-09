@@ -1,30 +1,29 @@
-package com.msai.usecases;
+package com.masai.usecases;
 
 import java.util.Scanner;
 
 import com.masai.dao.EmployeeDaoImpl;
 import com.masai.exceptions.EmployeeException;
 
-public class DeleteEmployee {
+public class BonusToEmployee {
 	
-	public void deleteEmployee() {
+	public void giveBonusToEmployee() {
 		
 		Scanner scanner=new Scanner(System.in);
 		
 		System.out.println("Enter Employee ID : ");
 		int empId=scanner.nextInt();
+		System.out.println("Enter Employee Bouns: ");
+		int bonus=scanner.nextInt();
 		
 		try {
-			Boolean result=new EmployeeDaoImpl().deleteEmployee(empId);
-			
-			if(result) {
-				System.out.println("Removed.");
-				
-			}else System.out.println("Not Removed.");
+			String result=new EmployeeDaoImpl().giveBonusToEmployee(empId, bonus);
+			System.out.println(result);
 			
 		} catch (EmployeeException employeeException) {
 			System.out.println(employeeException.getMessage());
 		}
+		
 		
 	}
 

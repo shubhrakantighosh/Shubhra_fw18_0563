@@ -1,11 +1,11 @@
-package com.msai.startapp;
+package com.masai.startapp;
 
 import java.util.Scanner;
 
-import com.msai.usecases.AddressOfEmployee;
-import com.msai.usecases.BonusToEmployee;
-import com.msai.usecases.DeleteEmployee;
-import com.msai.usecases.SaveEmployee;
+import com.masai.usecases.AddressOfEmployee;
+import com.masai.usecases.BonusToEmployee;
+import com.masai.usecases.DeleteEmployee;
+import com.masai.usecases.SaveEmployee;
 
 public class StartApp {
 	

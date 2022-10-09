@@ -1,4 +1,4 @@
-package com.msai.usecases;
+package com.masai.usecases;
 
 import java.util.Scanner;
 
