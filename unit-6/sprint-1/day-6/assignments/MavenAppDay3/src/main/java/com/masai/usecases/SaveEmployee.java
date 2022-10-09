@@ -27,8 +27,8 @@ public class SaveEmployee {
 		
 		try {
 			new EmployeeDaoImpl().save(employee);
-		} catch (EmployeeException employeeException) {
-			System.out.println(employeeException.getMessage());
+		} catch (Exception exception) {
+			System.out.println(exception.getMessage());
 		}
 		
 	}

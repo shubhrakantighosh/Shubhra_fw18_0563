@@ -22,8 +22,8 @@ public class DeleteEmployee {
 				
 			}else System.out.println("Not Removed.");
 			
-		} catch (EmployeeException employeeException) {
-			System.out.println(employeeException.getMessage());
+		} catch (Exception exception) {
+			System.out.println(exception.getMessage());
 		}
 		
 	}

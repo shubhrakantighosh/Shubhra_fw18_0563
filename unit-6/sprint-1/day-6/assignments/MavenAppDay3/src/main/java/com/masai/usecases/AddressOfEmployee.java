@@ -3,7 +3,6 @@ package com.masai.usecases;
 import java.util.Scanner;
 
 import com.masai.dao.EmployeeDaoImpl;
-import com.masai.exceptions.EmployeeException;
 
 public class AddressOfEmployee {
 	
@@ -20,8 +19,8 @@ public class AddressOfEmployee {
 			
 			System.out.println(result);
 			
-		} catch (EmployeeException employeeException) {
-			System.out.println(employeeException.getMessage());
+		} catch (Exception exception) {
+			System.out.println(exception.getMessage());
 		}
 		
 	}

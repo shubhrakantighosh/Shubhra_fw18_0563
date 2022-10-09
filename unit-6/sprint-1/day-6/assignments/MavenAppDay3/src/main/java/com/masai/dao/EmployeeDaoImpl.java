@@ -6,19 +6,18 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 import com.masai.entities.Employee;
-import com.masai.exceptions.EmployeeException;
 
 public class EmployeeDaoImpl implements EmployeeDao{
 
 	@Override
-	public void save(Employee emp) throws EmployeeException {
+	public void save(Employee emp) {
 		
 		EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("empUnit");
 		EntityManager entityManager=entityManagerFactory.createEntityManager();
 		
 		Employee employee=entityManager.find(Employee.class, emp.getEmpId());
 		
-		if(employee!=null) {
+		if(employee==null) {
 			
 			entityManager.getTransaction().begin();
 			entityManager.persist(emp);
@@ -33,7 +32,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	}
 
 	@Override
-	public String getAddressOfEmployee(int empId) throws EmployeeException {
+	public String getAddressOfEmployee(int empId) {
 		
 		String message="Not Found";
 		
@@ -50,7 +49,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	}
 
 	@Override
-	public String giveBonusToEmployee(int empId, int bonus) throws EmployeeException {
+	public String giveBonusToEmployee(int empId, int bonus) {
 		String message="Not Added";
 		
 		EntityManagerFactory entityManagerFactory=Persistence.createEntityManagerFactory("empUnit");
@@ -73,7 +72,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 	}
 
 	@Override
-	public boolean deleteEmployee(int empId) throws EmployeeException {
+	public boolean deleteEmployee(int empId) {
 		
 		boolean message=false;
 		

@@ -20,8 +20,8 @@ public class BonusToEmployee {
 			String result=new EmployeeDaoImpl().giveBonusToEmployee(empId, bonus);
 			System.out.println(result);
 			
-		} catch (EmployeeException employeeException) {
-			System.out.println(employeeException.getMessage());
+		} catch (Exception exception) {
+			System.out.println(exception.getMessage());
 		}
 		
 		
