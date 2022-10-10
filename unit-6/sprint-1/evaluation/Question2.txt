@@ -1,0 +1,6 @@
+Life-cycle of Entity class: Entity life cycle has 4 cycles New, Manage, 
+Removed, and Detached. So, using this we can do various operations. 
+New: Using we can register on our database.
+Managed: We can manage.
+Removed: We can move from the database.
+Detached: We can detach from the debases.

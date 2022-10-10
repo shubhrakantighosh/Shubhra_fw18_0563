@@ -1,0 +1,6 @@
+Advantages of using Hibernate over JDBC: Basically, both work the same but due to the hepatic process we use Hibernate. 
+In JDBC each project we have to add a jar file, and we have to write SQL queries it doesn’t matter how long the SQL queries
+ are and if you talk about 10 plus tables, we have to write so many lines. But by using Hibernate Day to day life becomes easier 
+we don’t have to add any jar file we just have to add source code in the pom.xml file. And it is faster than JDBC. And also, we don’t 
+have to remember or practice those SQL or MySQL or SQLite Syntaxes. Using our java syntax, we can same thing. So those are some 
+points that will prove what is the advantage of using Hibernate.
