@@ -82,6 +82,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			entityManager.merge(employee);
 			entityManager.getTransaction().commit();
 			
+			employee2=employee;
 		}
 		
 		entityManager.close();
