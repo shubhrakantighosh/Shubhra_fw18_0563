@@ -43,9 +43,8 @@ public class RegisterEmployee {
 			    if(employee!=null) {
 			    	System.out.println("Register Successfully.");
 			    }
-			    
 			    	
-			}else System.out.println("Employee ID Already Exist.");
+			}
 			
 		} catch (EmployeeException employeeException) {
 			

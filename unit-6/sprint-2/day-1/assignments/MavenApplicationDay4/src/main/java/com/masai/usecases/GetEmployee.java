@@ -20,10 +20,7 @@ public class GetEmployee {
 
 			Employee employee= employeeDao.getEmployeeById(employeeID);
 			
-			if(employee==null) {
-				System.out.println("Doesn't Exist.");
-				
-			}else System.out.println(employee);
+			System.out.println(employee);
 			
 		} catch (EmployeeException employeeException) {
 			

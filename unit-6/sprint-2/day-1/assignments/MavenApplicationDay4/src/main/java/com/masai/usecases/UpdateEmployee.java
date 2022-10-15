@@ -34,9 +34,8 @@ public class UpdateEmployee {
 			    if(employee!=null) {
 			    	System.out.println("Update Successfully.");
 			    }
-			    
 			    	
-			}else System.out.println("Employee ID Not Exist.");
+			}
 			
 		} catch (EmployeeException employeeException) {
 			

@@ -20,10 +20,7 @@ public class DeleteEmployee {
 
 			Employee employee2= employeeDao.deleteEmployeeById(employeeID);
 			
-			if(employee2==null) {
-				System.out.println("Doesn't Exist.");
-				
-			}else System.out.println("Removed.");
+			System.out.println("Removed.");
 			
 		} catch (EmployeeException employeeException) {
 			

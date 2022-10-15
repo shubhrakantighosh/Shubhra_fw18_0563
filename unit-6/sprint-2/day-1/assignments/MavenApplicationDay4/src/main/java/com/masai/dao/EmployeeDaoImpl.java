@@ -10,9 +10,12 @@ public class EmployeeDaoImpl implements EmployeeDao{
 
 	@Override
 	public Employee registerEmployee(Employee employee) throws EmployeeException {
-		
 		Employee employee2=null;
 		
+		if(employee==null) 
+			throw new EmployeeException("Don't provide null value.");
+		
+
 		EntityManager entityManager=EMUtil.provideEntityManager();
 		
 		employee2=entityManager.find(Employee.class, employee.getEmpId());
@@ -23,7 +26,9 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			entityManager.persist(employee);
 			entityManager.getTransaction().commit();
 			employee2=employee;
-		}
+			
+		}else 
+			throw new EmployeeException("Employee already exists.");
 		
 		entityManager.close();
 		
@@ -39,6 +44,8 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		
 		employee2=entityManager.find(Employee.class, empId);
 		
+		if(employee2==null)
+			throw new EmployeeException("Employee not found.");
 		
 		entityManager.close();
 		
@@ -61,6 +68,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			entityManager.getTransaction().commit();
 			
 		}
+		else throw new EmployeeException("Employee not found.");
 		
 		entityManager.close();
 		
@@ -83,7 +91,8 @@ public class EmployeeDaoImpl implements EmployeeDao{
 			entityManager.getTransaction().commit();
 			
 			employee2=employee;
-		}
+		}else 
+			throw new EmployeeException("Not exists.");
 		
 		entityManager.close();
 		
