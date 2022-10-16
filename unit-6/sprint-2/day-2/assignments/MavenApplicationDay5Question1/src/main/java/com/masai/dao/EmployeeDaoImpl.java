@@ -1,11 +1,10 @@
 package com.masai.dao;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import javax.persistence.EntityManager;
-import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import com.masai.dao.exceptions.EmployeeException;
 import com.masai.model.Address;
@@ -15,38 +14,50 @@ import com.masai.utility.EMUtil;
 public class EmployeeDaoImpl implements EmployeeDao{
 
 	@Override
-	public Employee saveEmployee(Employee employee) throws EmployeeException {
-		Employee employee2=null;
+	public String saveEmployee(Employee employee) throws EmployeeException {
+		String message="Not added.";
 		
 		EntityManager entityManager=EMUtil.provideEntityManager();
 		
-		entityManager.getTransaction().begin();
-		entityManager.persist(employee);
-		entityManager.getTransaction().commit();
-		
-		employee2=employee;
+		if(employee!=null) {
+			
+			entityManager.getTransaction().begin();
+			entityManager.persist(employee);
+			entityManager.getTransaction().commit();
+			
+			message="Added";
+			
+		}else throw new EmployeeException("Don't enter null value.");
+	
 		
 		entityManager.close();
 		
-		return employee2;
+		return message;
 	}
 
 	@Override
-	public Set<Address> addresses(Employee employee) throws EmployeeException {
+	public Set<Address> getAddresses(int cid) throws EmployeeException {
 		Set<Address>addresses=new HashSet<>();
 		
 		EntityManager entityManager=EMUtil.provideEntityManager();
 		
-		String jpql="select city,pincode,state,type from employee_addresses where employee_cid=1;";
+		Employee employee=entityManager.find(Employee.class, cid);
 		
-		Query query=entityManager.createQuery(jpql);
-//		query.setParameter("cid", employee.getCid());
+		if(employee!=null) {
+			
+			TypedQuery<Employee> typedQuery=entityManager.createQuery("from Employee where cid=:cid",Employee.class);
+			typedQuery.setParameter("cid", cid);
+			
+			employee=typedQuery.getSingleResult();
+			
+			addresses=employee.getAddresses();
+			
+		}else throw new EmployeeException("Not exists.");
 		
-//		List<Object>list=query.getResultList();
-		
-//		list.forEach(System.out::println);
+//		entityManager.close();
 		
 		return addresses;
 	}
+
 
 }
