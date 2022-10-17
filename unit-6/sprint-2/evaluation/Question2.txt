@@ -1,0 +1,10 @@
+Explain the difference between JPA and Hibernate, and What are the advantages of using Hibernate over JDBC?
+
+If we talk about JDBC vs Hibernate both are working the same but the main problem is using JDBC to do all the operations it’s
+ a very hepatic process for day-to-day life work. To enhance performance, ace and reduce code here is come hibernate. Using 
+hibernate our day-to-day life easier. We can do a 10plus table using pieces of the line of code. That is the advantage and the 
+main thing is we don’t have to remember all those syntaxes For MYSQL and SQLite etc. we can do that thing using our coding 
+language. That’s all about the advantages of using hibernate.
+
+JPA is the query language we use to get particular data from the database. If we talk about MySQL queries and JPA queries
+ mostly quite small. That’s all about JPA. 
