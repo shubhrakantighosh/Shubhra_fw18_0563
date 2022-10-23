@@ -9,7 +9,7 @@ public class EMUtil {
 	private static EntityManagerFactory entityManagerFactory;
 
 	static {
-		entityManagerFactory=Persistence.createEntityManagerFactory("PersonEmployee");
+		entityManagerFactory=Persistence.createEntityManagerFactory("StudentCourse");
 	}
 	
 	public static EntityManager provideEntityManager() {
