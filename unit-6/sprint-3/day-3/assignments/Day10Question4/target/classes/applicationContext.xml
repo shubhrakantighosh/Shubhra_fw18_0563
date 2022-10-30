@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+        
+        
+        <bean id="employee1" class="com.masai.Employee" >
+        
+        <constructor-arg name="empId" value="11" />
+        <constructor-arg name="empName" value="Shubhra" />
+        <constructor-arg name="address" value="Kolkata" />
+        <constructor-arg name="salary" value="900000" />
+        
+        </bean>
+        
+         <bean id="employee2" class="com.masai.Employee" >
+        
+        <constructor-arg name="empId" value="12" />
+        <constructor-arg name="empName" value="Chirag" />
+        <constructor-arg name="address" value="Durgapur" />
+        <constructor-arg name="salary" value="850000" />
+        
+        </bean>
+        
+         <bean id="employee3" class="com.masai.Employee" >
+        
+        <constructor-arg name="empId" value="13" />
+        <constructor-arg name="empName" value="Soumya" />
+        <constructor-arg name="address" value="Bardhaman" />
+        <constructor-arg name="salary" value="1000000" />
+        
+        </bean>
+        
+        
+         <bean id="employee4" class="com.masai.Employee" >
+        
+        <constructor-arg name="empId" value="14" />
+        <constructor-arg name="empName" value="Subhadeep" />
+        <constructor-arg name="address" value="Hydrabad" />
+        <constructor-arg name="salary" value="650000" />
+        
+        </bean>
+        
+        
+         <bean id="employee5" class="com.masai.Employee" >
+        
+        <constructor-arg name="empId" value="15" />
+        <constructor-arg name="empName" value="Sourik" />
+        <constructor-arg name="address" value="Chennai" />
+        <constructor-arg name="salary" value="12000000" />
+        
+        </bean>
+        
+        
+        <bean id="department1" class="com.masai.Department"  >
+        
+        <constructor-arg name="deptId" value="101"  />
+        <constructor-arg name="deptName" value="HR"  />
+        <constructor-arg name="location" value="Kolkata"  />
+        
+        </bean>
+        
+         <bean id="department2" class="com.masai.Department"  >
+        
+        <constructor-arg name="deptId" value="102"  />
+        <constructor-arg name="deptName" value="Manager"  />
+        <constructor-arg name="location" value="Bengaluru"  />
+        
+        </bean>
+        
+         <bean id="demo1" class="com.masai.Demo"  >
+        
+             <property name="theMap">
+                    <map>
+                         <entry key-ref="department1" value-ref="employee1"/>
+                         <entry key-ref="department1" value-ref="employee2"/>
+                         <entry key-ref="department1" value-ref="employee3"/>
+                         <entry key-ref="department2" value-ref="employee4"/>
+                         <entry key-ref="department2" value-ref="employee5"/>
+                    </map>
+        
+             </property>
+        
+        </bean>
+        
+     
+            
+</beans>

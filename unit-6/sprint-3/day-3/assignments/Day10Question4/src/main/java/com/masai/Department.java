@@ -3,11 +3,11 @@ package com.masai;
 public class Department {
 
 	private int deptId;
-	private int deptName;
-	private int location;
+	private String deptName;
+	private String location;
 	
 	
-	public Department(int deptId, int deptName, int location) {
+	public Department(int deptId, String deptName, String location) {
 		super();
 		this.deptId = deptId;
 		this.deptName = deptName;
@@ -19,6 +19,5 @@ public class Department {
 	public String toString() {
 		return "Department [deptId=" + deptId + ", deptName=" + deptName + ", location=" + location + "]";
 	}
-
 	
 }
