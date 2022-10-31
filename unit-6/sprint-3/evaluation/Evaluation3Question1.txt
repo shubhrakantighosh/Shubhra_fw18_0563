@@ -1,0 +1,6 @@
+LOC: Loc is a container of Spring. Its work from the xml file. And configured all the file.
+
+Life Cycle of Bean: The life cycle of the spring bean managed by the spring container.
+When we execute the application first the spring container gets started. Then create beans
+ instance we defined. then dependencies and injected and at the last it destroys the bean and close it. 
+all about Life Cycle of Spring Bean. 
